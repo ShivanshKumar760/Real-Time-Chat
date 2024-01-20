@@ -1,18 +1,9 @@
-type UserId=string;
+import { Store } from "./storage/Store";
 
-export interface Chat{
-    userId:UserId;
-    name:String;
-    message:string;
-    // upvote:number;
-    upvote:UserId[];//to store who has upvoted what cause people can downvote
-}
-
-
-export abstract class Store{
+export class InMemoryStore implements Store{
     constructor()
     {
-
+        this.store =
     }
     initRoom()
     {
