@@ -10,6 +10,7 @@ var server = http.createServer(
         response.end();
     }
 );
+ 
 server.listen(8000,function(){
     console.log((new Date())+'Server is listening on port 8000')
 })
