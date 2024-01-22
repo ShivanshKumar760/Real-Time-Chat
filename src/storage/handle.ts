@@ -1,5 +1,6 @@
+import { InMemoryStore } from "../InMemoryStore";
 
-getChats(roomId:string,limit:number,offset:number)
+function getChats(roomId:string,limit:number,offset:number)
 {
     const room = this.store.get(roomId);
     if(!room)
