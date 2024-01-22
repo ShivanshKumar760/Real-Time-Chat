@@ -14,7 +14,7 @@ export abstract class Store{
     {
 
     }
-    initRoom()
+    initRoom(roomId:String)
     {
 
     }

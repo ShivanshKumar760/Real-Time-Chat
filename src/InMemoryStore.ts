@@ -1,13 +1,21 @@
-import { Store } from "./storage/Store";
+import { Chat, Store } from "./storage/Store";
+export interface Room{
+    roomId:string;
+    chats:Chat[];
 
+}
 export class InMemoryStore implements Store{
+    private store:Map<string,Room>;
     constructor()
     {
-        this.store =
+        this.store = new Map<string,Room>()
     }
-    initRoom()
+    initRoom(roomId:string)
     {
-
+        this.store.set(roomId,{
+            roomId,
+            chats:[]
+        });
     }
 
     getChats(room:string,limit:number,offset:number)
