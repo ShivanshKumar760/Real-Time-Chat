@@ -26,6 +26,7 @@ export class InMemoryStore implements Store{
             return []
         }
         return room.chats;
+        return roomId;
     }
 
     addChat(room:string,limit:number,offset:number)
