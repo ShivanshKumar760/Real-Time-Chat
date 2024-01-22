@@ -18,9 +18,14 @@ export class InMemoryStore implements Store{
         });
     }
 
-    getChats(room:string,limit:number,offset:number)
+    getChats(roomId:string,limit:number,offset:number)
     {
-
+        const room = this.store.get(roomId);
+        if(!room)
+        {
+            return []
+        }
+        return room.chats;
     }
 
     addChat(room:string,limit:number,offset:number)
